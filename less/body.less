@@ -19,7 +19,7 @@ input, textarea {
   font-family: @font-family, "Arial", sans-serif;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: black;
 }
 
@@ -34,8 +34,49 @@ h1, h2, p, b, span, a {
   word-wrap: break-word;
 }
 
-@media all and (-ms-high-contrast:none) {
-  *::-ms-backdrop, .photo__descr { padding-top: 10px; } /* IE11 */
+
+
+@media (min-width: 1px) and (-ms-high-contrast:none) {
+  *::-ms-backdrop, input:-ms-input-placeholder { color: black; }
+  *::-ms-backdrop, textarea:-ms-input-placeholder { color: black; }
+  *::-ms-backdrop, .photo__descr { margin-top: 10px; } /* IE11 */
+  *::-ms-backdrop, .likes { margin-bottom: 14px; }
+  *::-ms-backdrop, .advantage__title {margin-top: 21px;}
+  *::-ms-backdrop, .feedback-form__block--impression-style {  padding-top: 7px; }
+  *::-ms-backdrop, .advantage__title--number-one-state { margin-top: 54px; }
+  *::-ms-backdrop, .advantage__title--number-two-state { margin-top: 37px; }
+  *::-ms-backdrop, .welcome-slogan__text { margin-top: 29px; }
+  *::-ms-backdrop, .advantage__list--number-one-state { margin-top: 34px; margin-bottom: 36px; }
+  *::-ms-backdrop, .advantage__header--passiv-style .advantage__text { margin-bottom: 15px; }
+}
+
+@media @tablet-widths and (-ms-high-contrast:none) {
+  *::-ms-backdrop, .photo__descr { padding-top: 10px; margin-top: 0px;} /* IE11 */
+  *::-ms-backdrop, .advantage__title {margin-top: 5px;}
+  *::-ms-backdrop, fieldset.feedback-form__block--sight-style { margin-top: 36px; }
+  *::-ms-backdrop, input.feedback-form__send-btn { margin-top: 46px; }
+  *::-ms-backdrop, .welcome-slogan__text { width: 490px; }
+}
+
+@-moz-document url-prefix() {
+  input::-moz-placeholder, textarea::-moz-placeholder { color: black; opacity:  1; }
+  fieldset.feedback-form__block--contact-style {  padding-bottom: 11px; }
+  fieldset.feedback-form__block--impression-style {  padding-top: 11px; }
+  span.likes { margin-bottom: 14px; }
+  p.welcome-slogan__text { margin-top: 27px; }
+  ul.advantage__list { margin-bottom: 33px; }
+
+
+  @media @tablet-widths {
+    fieldset.feedback-form__block--impression-style {  padding-top: 40px; }
+    input.feedback-form__send-btn { margin-top: 42px; }
+    span.likes { margin-bottom: 17px; }
+    ul.advantage__list { margin-bottom: 38px; }
+  }
+
+  @media @desktop-widths {
+    fieldset.feedback-form__block--impression-style {  padding-top: 34px; }
+  }
 }
 
 @media @desktop-widths {
