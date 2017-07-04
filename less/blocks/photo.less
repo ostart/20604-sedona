@@ -1,11 +1,13 @@
 .photo {
   width: 100%;
   margin: 0 auto;
-
+  background-color: @main-color;
 }
 
 .photo__item-img {
   border-top: 1px solid @separator-line-color;
+  margin: 0 auto;
+  width: 320px;
 
   a {
     height: 0px;
@@ -75,7 +77,7 @@
 
   .photo__item-img {
     border: none;
-
+    width: 100%;
 
     img {
       margin: 0;
@@ -116,7 +118,7 @@
 
 @media @desktop-widths {
   .photo__item {
-    width: 33.3%;
+    width: 33.3333333%;
     position: relative;
 
     &:nth-of-type(2n) {
