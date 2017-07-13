@@ -9,15 +9,14 @@
   color: white;
   width: 258px;
   margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-top: 27px;
 
   &--number-one-state {
-    margin-top: 30px;
+    margin-top: 55px;
   }
 
   &--number-two-state {
-    margin-top: 13px;
+    margin-top: 39px;
   }
 }
 
@@ -31,12 +30,28 @@
   margin: 0 auto;
 }
 
+.advantage__num {
+  margin-bottom: 5px;
+}
+
+.advantage__text{
+  margin-bottom: 29px;
+
+  &--number-one-state {
+    margin-bottom: 41px;
+  }
+
+  &--number-two-state {
+    margin-bottom: 39px;
+  }
+}
+
 .advantage__header {
   background-color: @primary-color;
-  min-height: 166px;
+  min-height: 168px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box;
 
   &--passiv-style {
@@ -44,17 +59,12 @@
 
     .advantage__title {
       color: black;
-      margin-top: 26px;
     }
 
     .advantage__num,
     .advantage__text {
       color: @secondary-color;
       width: 258px;
-    }
-
-    .advantage__text {
-      margin-bottom: 16px;
     }
   }
 
@@ -174,14 +184,9 @@
   .advantage__header {
     width: 33.5%;
     min-height: 256px;
-    justify-content: space-between;
-    padding-top: 36px;
-    padding-bottom: 31px;
 
     &--passiv-style {
       width: 100%;
-      padding-top: 15px;
-      padding-bottom: 15px;
 
       .advantage__num,
       .advantage__text {
@@ -206,20 +211,17 @@
   .advantage__title {
     font-size: @font-size-xl;
     width: 151px;
-    margin-bottom: -2px;
-
-    &--number-one-state,
-    &--number-two-state {
-      margin-top: 5px;
-    }
+    margin-top: 41px;
   }
 
   .advantage__num {
     width: 100%;
+    margin-bottom: 17px;
   }
 
   .advantage__text {
     width: 168px;
+    margin-bottom: 42px;
   }
 
   .advantage__photo {
@@ -250,7 +252,7 @@
     padding-left: 0px;
 
     &--number-one-state {
-      margin-top: 14px;
+      margin-top: 16px;
     }
   }
 
@@ -303,37 +305,35 @@
 }
 
 @media @desktop-widths {
+  .advantage__title {
+
+    &--number-one-state,
+    &--number-two-state {
+      margin-top: 49px;
+    }
+  }
+
   .advantage__num,
   .advantage__text {
     width: 265px;
   }
 
+  .advantage__text {
+    margin-bottom: 64px;
+
+    &--number-one-state,
+    &--number-two-state {
+      margin-bottom: 57px;
+    }
+  }
+
   .advantage__header {
-    padding-bottom: 35px;
 
     &--passiv-style {
 
       .advantage__num,
       .advantage__text {
         width: 275px;
-      }
-    }
-
-    .advantage__num {
-      margin-left: auto;
-    }
-
-    &--number-one-state {
-      padding-top: 42px;
-      padding-bottom: 45px;
-    }
-
-    &--number-two-state {
-      padding-top: 44px;
-      padding-bottom: 43px;
-
-      .advantage__num, .advantage__text {
-        width: 256px;
       }
     }
   }
